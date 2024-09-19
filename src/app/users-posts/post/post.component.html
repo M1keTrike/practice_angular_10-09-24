@@ -1,0 +1,8 @@
+<div *ngFor="let post of posts_list">
+  <mat-card appearance="outlined">
+    <mat-card-content>{{ post.id }}</mat-card-content>
+    <mat-card-header>{{ post.userId }}</mat-card-header>
+    <mat-card-content>{{ post.title }}</mat-card-content>
+    <mat-card-content>{{ post.body }}</mat-card-content>
+  </mat-card>
+</div>
