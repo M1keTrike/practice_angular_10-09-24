@@ -1,0 +1,97 @@
+#div__div-form {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  
+  
+  #div__div-title {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+  
+  #div__div-cancelAddUser {
+      display: flex;
+      flex-direction: row-reverse;
+      
+  }
+  
+  #div__div-cancelAddUserCorner{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  #button__button-cancelAdduser {
+    background-color: #ff0000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px;
+    align-self: flex-start;
+    width: 30px;
+    height: 30px;
+  }
+  
+  #img__img-cancelAddUser {
+    width: 20px;
+    height: 20px;
+  }
+  img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  textarea,
+  mat-form-field {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

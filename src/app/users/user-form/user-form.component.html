@@ -1,0 +1,64 @@
+<div id="div__div-form">
+    <div id="div__div-cancelAddUser">
+      <div id="div__div-cancelAddUserCorner">
+        <button id="button__button-cancelAdduser" (click)="cancelar()">
+          <img
+            id="img__img-cancelAddUser"
+            src="https://cdn.icon-icons.com/icons2/2518/PNG/512/x_icon_150997.png"
+          />
+        </button>
+      </div>
+    </div>
+    <div id="div__div-title">
+      <img src="https://cdn-icons-png.flaticon.com/512/153/153643.png" />
+      <h4>Add User</h4>
+    </div>
+  
+    <form (ngSubmit)="enviar()" #userForm="ngForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          placeholder="Enter your name"
+          [(ngModel)]="user.name"
+          name="name"
+          required
+        />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input
+          matInput
+          placeholder="Enter your username"
+          [(ngModel)]="user.username"
+          name="username"
+          required
+        />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Phone</mat-label>
+        <input
+          matInput
+          placeholder="Enter your phone number"
+          [(ngModel)]="user.phone"
+          name="phone"
+          required
+        />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Website</mat-label>
+        <input
+          matInput
+          placeholder="Enter your website"
+          [(ngModel)]="user.website"
+          name="website"
+        />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </div>
+  
