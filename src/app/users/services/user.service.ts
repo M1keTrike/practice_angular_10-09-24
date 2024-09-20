@@ -4,14 +4,18 @@ import { Observable } from 'rxjs';
 import { IUser } from '../modelo/iuser';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
   private apiUrl = 'https://jsonplaceholder.typicode.com/users';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAll(): Observable<IUser[]> {
     return this.http.get<IUser[]>(this.apiUrl);
+  }
+
+  getUserById(id: number): Observable<IUser> {
+    return this.http.get<IUser>(this.apiUrl + '/' + id);
   }
 }

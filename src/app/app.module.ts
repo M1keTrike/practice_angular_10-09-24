@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersPostsModule } from './users-posts/users-posts.module';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [

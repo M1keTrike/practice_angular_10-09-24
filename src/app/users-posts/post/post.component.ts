@@ -1,24 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserService } from '../../users/services/user.service';
 import { Ipost } from '../modelo/Ipost';
-import { PostService } from '../services/post.service';
+import { PostView } from '../modelo/PostView';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrl: './post.component.css',
+  styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
-  posts_list: Ipost[] = [];
+  @Input() post: Ipost | undefined;
 
-  constructor(private postService: PostService) {}
+  postView: PostView | undefined;
 
-  ngOnInit() {
-    this.loadPosts();
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+    this.loadUser();
   }
 
-  loadPosts() {
-    this.postService.getAll().subscribe((posts) => {
-      this.posts_list = posts;
-    });
+  loadUser(): void {
+    if (this.post) {
+      this.userService.getUserById(this.post.userId).subscribe((user) => {
+        if (this.post) {
+          this.postView = {
+            posted_by: user,
+            body: this.post.body,
+            title: this.post.title,
+          };
+        }
+      });
+    }
   }
 }
